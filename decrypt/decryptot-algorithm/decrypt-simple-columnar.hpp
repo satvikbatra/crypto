@@ -16,7 +16,7 @@ void decryptSimpleColumnar(string& encryptedText, int columnsCount) {
         linesCount = lengthText / columnsCount + 1;
     }
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     int k = 0;
     for (int i = 0; i < linesCount; i++) {

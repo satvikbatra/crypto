@@ -4,8 +4,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <limits>
-#include "D:\Crypto\string-processings\remove-invalid-characters.hpp"
-#include "D:\Crypto\string-processings\replace-equivalent-characters.hpp"
+#include "../string-processings/remove-invalid-characters.hpp"
+#include "../string-processings/replace-equivalent-characters.hpp"
 using namespace std;
 #define MAX_LENGTH_TEXT 99999
 

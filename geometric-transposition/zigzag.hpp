@@ -19,7 +19,7 @@ void zigzag(string& text) {
         linesCount++;
     }
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     char state = 'r';
     int k = 0;

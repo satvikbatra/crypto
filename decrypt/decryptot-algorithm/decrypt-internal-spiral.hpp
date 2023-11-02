@@ -34,7 +34,7 @@ void decryptInternalSpiral(string& encryptedText) {
         columnsCount -= 2;
     }
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     for (int i = 0; i < linesCount; i++) {
         for (int j = 0; j < columnsCount; j++) {
@@ -48,8 +48,14 @@ void decryptInternalSpiral(string& encryptedText) {
     int i = verticalMiddle, j = horizontalMiddle, k = 0;
     char state = 'r';
 
-    vector<int> verticalLimit = {verticalMiddle - 1, verticalMiddle + 1};
-    vector<int> horizontalLimit = {horizontalMiddle - 1, horizontalMiddle + 1};
+    vector<int> verticalLimit;
+    verticalLimit.push_back(verticalMiddle - 1);
+    verticalLimit.push_back(verticalMiddle + 1);
+
+    vector<int> horizontalLimit;
+    horizontalLimit.push_back(horizontalMiddle - 1);
+    horizontalLimit.push_back(horizontalMiddle + 1);
+
 
     while (k < lengthText) {
         switch (state) {

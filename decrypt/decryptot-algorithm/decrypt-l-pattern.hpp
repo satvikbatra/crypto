@@ -18,7 +18,7 @@ void decryptLPattern(string& encryptedText) {
         columnsCount++;
     }
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     int i = 0, j = 0, k = 0;
     char state = 'd';

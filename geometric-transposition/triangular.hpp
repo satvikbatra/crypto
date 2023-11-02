@@ -23,7 +23,7 @@ void triangular(string& text) {
 
     columnsCount = maxCharLastLine;
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     int maxCharCurrentLine = 1;
     int k = 0;

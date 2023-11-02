@@ -19,13 +19,19 @@ void externalSpiral(string& text) {
         linesCount++;
     }
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     int i = 0, j = 0, k = 0;
     char state = 'r';
 
-    vector<int> verticalLimit = { 1, linesCount - 1 };
-    vector<int> horizontalLimit = { 0, columnsCount - 1 };
+    vector<int> verticalLimit;
+    verticalLimit.push_back(1);
+    verticalLimit.push_back(linesCount - 1);
+
+    vector<int> horizontalLimit;
+    horizontalLimit.push_back(0);
+    horizontalLimit.push_back(columnsCount - 1);
+
 
     while (k < lengthText) {
         switch (state) {

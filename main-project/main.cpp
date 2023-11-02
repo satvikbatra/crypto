@@ -1,7 +1,7 @@
 #include <iostream>
 #include "default-inclusions.hpp"
-#include "encrypt-text.hpp"
-#include "decrypt-text.hpp"
+#include "./encrypt-text.hpp"
+#include "./decrypt-text.hpp"
 #include "set-text.hpp"
 #include "show-text.hpp"
 using namespace std;

@@ -35,7 +35,7 @@ void internalSpiral(string& text) {
         columnsCount -= 2;
     }
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     int verticalMiddle = (linesCount - 1) / 2;
     int horizontalMiddle = (columnsCount - 1) / 2;
@@ -43,8 +43,14 @@ void internalSpiral(string& text) {
     int i = verticalMiddle, j = horizontalMiddle, k = 0;
     char state = 'r';
 
-    vector<int> verticalLimit = { verticalMiddle - 1, verticalMiddle + 1 };
-    vector<int> horizontalLimit = { horizontalMiddle - 1, horizontalMiddle + 1 };
+    vector<int> verticalLimit(2);
+    verticalLimit[0] = verticalMiddle - 1;
+    verticalLimit[1] = verticalMiddle + 1;
+
+    vector<int> horizontalLimit(2);
+    horizontalLimit[0] = horizontalMiddle - 1;
+    horizontalLimit[1] = horizontalMiddle + 1;
+
 
     while (k < lengthText) {
         switch (state) {

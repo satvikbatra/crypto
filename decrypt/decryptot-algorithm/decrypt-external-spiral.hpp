@@ -19,7 +19,7 @@ void decryptExternalSpiral(string& encryptedText) {
         linesCount++;
     }
 
-    vector<vector<char>> matrix(linesCount, vector<char>(columnsCount, '-'));
+    vector<vector<char > > matrix(linesCount, vector<char>(columnsCount, '-'));
 
     for (int i = 0; i < linesCount; i++) {
         for (int j = 0; j < columnsCount; j++) {
@@ -30,8 +30,14 @@ void decryptExternalSpiral(string& encryptedText) {
     int i = 0, j = 0, k = 0;
     char state = 'r';
 
-    vector<int> verticalLimit = {1, linesCount - 1};
-    vector<int> horizontalLimit = {0, columnsCount - 1};
+    vector<int> verticalLimit(2);
+    verticalLimit[0] = 1;
+    verticalLimit[1] = linesCount - 1;
+
+    vector<int> horizontalLimit(2);
+    horizontalLimit[0] = 0;
+    horizontalLimit[1] = columnsCount - 1;
+
 
     while (k < lengthText) {
         switch (state) {
